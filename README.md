@@ -7,7 +7,7 @@ This project is a modern static barbershop website created for a local grooming 
 The website was designed and deployed as part of a Full Stack Web Development internship task, focusing on frontend development, responsive design, and real-world business problem solving.
 
 Live Website:
-[Denny Dalton Barbershop)](https://nqobizitha04mbuyisa.github.io/FUTURE_FS_03/)
+[Denny Dalton Fixers)](https://nqobizitha04mbuyisa.github.io/FUTURE_FS_03/)
 
 
 **Project Purpose**

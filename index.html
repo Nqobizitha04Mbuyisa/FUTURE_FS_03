@@ -247,6 +247,7 @@
         }
 
         .barber-img {
+            overflow: hidden;
             width: 160px;
             height: 160px;
             border-radius: 50%;
@@ -259,11 +260,16 @@
             border: 3px solid var(--gold);
             color: var(--gold);
         }
+        .barber-img img {
+           width: 100%;
+           height: 100%;
+           object-fit: cover;
+         }
 
-        .barber-card h3 {
+        /*.barber-card h3 {
             font-size: 1.6rem;
             margin-bottom: 5px;
-        }
+        }*/
 
         .barber-title {
             color: var(--gold);
@@ -284,6 +290,7 @@
         }
 
         .gallery-item {
+            overflow: hidden;
             border-radius: 20px;
             overflow: hidden;
             aspect-ratio: 1 / 1;
@@ -595,13 +602,17 @@
             <div class="section-sub">Two passionate barbers dedicated to redefining your style.</div>
             <div class="barbers-grid">
                 <div class="barber-card">
-                    <div class="barber-img"><i class="fas fa-user-tie"></i></div>
+                    <div class="barber-img">
+                     <img src="Hair Barber.jpg" alt="Ntokozo Mbuyisa">
+                    </div>
                     <h3>Ntokozo Mbuyisa </h3>
                     <div class="barber-title">Master Barber & Fade Specialist</div>
                     <p class="barber-bio">At 21, Ntokozo brings fresh energy & precision. Known for his flawless skin fades and attention to detail. He’s trained in advanced modern techniques and is passionate about making every client look their sharpest.</p>
                 </div>
                 <div class="barber-card">
-                    <div class="barber-img"><i class="fas fa-user-astronaut"></i></div>
+                    <div class="barber-img">
+                     <img src="Beard Specialist.jpg" alt="Nqobizitha Mbuyisa">
+                    </div>
                     <h3>Nqobizitha Mbuyisa "The Fixer" </h3>
                     <div class="barber-title">Grooming Expert & Beard Architect</div>
                     <p class="barber-bio">22 years old, Nqobizitha specializes in beard sculpting and luxury grooming rituals. With a calm yet confident approach, he makes sure each cut is a masterpiece. Winner of local style awards 2025.</p>
@@ -616,10 +627,10 @@
             <h2>Fresh Looks <span class="gold-text">Gallery</span></h2>
             <div class="section-sub">Our work speaks for itself — modern cuts, clean fades, happy gents.</div>
             <div class="gallery-grid">
-                <div class="gallery-item"><img src="https://placehold.co/600x600/222222/C9A03D?text=Clean+Fade+Ulundi" alt="Haircut style"></div>
-                <div class="gallery-item"><img src="https://placehold.co/600x600/222222/C9A03D?text=Beard+Trim+Expert" alt="Beard grooming"></div>
-                <div class="gallery-item"><img src="https://placehold.co/600x600/222222/C9A03D?text=Premium+Tools" alt="Barber tools premium"></div>
-                <div class="gallery-item"><img src="https://placehold.co/600x600/222222/C9A03D?text=Happy+Client+Style" alt="Happy client"></div>
+                <div class="gallery-item"><img src="Haircut and Style.png?text=Clean+Fade+Ulundi" alt="Haircut style"></div>
+                <div class="gallery-item"><img src="Beard.jpg?text=Beard+Trim+Expert" alt="Beard grooming"></div>
+                <div class="gallery-item"><img src="BarberTools.jpg?text=Premium+Tools" alt="Barber tools premium"></div>
+                <div class="gallery-item"><img src="Happy Client.jpg?text=Happy+Client+Style" alt="Happy client"></div>
             </div>
         </div>
     </section>

@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="Denny Dalton Fixers - Premium barbershop in Ulundi, South Africa. Expert haircuts, skin fades, beard trims & modern grooming next to Nkamelwane Primary School.">
+    <title>Denny Dalton Fixers | Premium Barbershop Ulundi</title>
+    <!-- Google Fonts & Font Awesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- AOS Library for scroll animations -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0A0A0A;
+            color: #F5F5F5;
+            scroll-behavior: smooth;
+            line-height: 1.5;
+        }
+
+        /* Premium gold + dark theme */
+        :root {
+            --dark-bg: #0A0A0A;
+            --card-bg: #111111;
+            --gold: #C9A03D;
+            --gold-light: #E4BC62;
+            --gold-dark: #A17F2E;
+            --white: #FFFFFF;
+            --off-white: #F0F0F0;
+            --gray-border: #2A2A2A;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        section {
+            padding: 80px 0;
+            border-bottom: 1px solid rgba(201, 160, 61, 0.15);
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            letter-spacing: -0.02em;
+        }
+
+        .gold-text {
+            color: var(--gold);
+        }
+
+        .section-sub {
+            color: #B0B0B0;
+            max-width: 650px;
+            margin-bottom: 48px;
+            font-size: 1.1rem;
+        }
+
+        /* Buttons */
+        .btn-primary, .btn-secondary {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 32px;
+            border-radius: 48px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-primary {
+            background: var(--gold);
+            color: #0A0A0A;
+            box-shadow: 0 8px 20px rgba(201, 160, 61, 0.2);
+        }
+
+        .btn-primary:hover {
+            background: var(--gold-light);
+            transform: translateY(-3px);
+            box-shadow: 0 15px 25px rgba(201, 160, 61, 0.25);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            border: 1.5px solid var(--gold);
+            color: var(--gold);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(201, 160, 61, 0.1);
+            transform: translateY(-3px);
+            border-color: var(--gold-light);
+            color: var(--gold-light);
+        }
+
+        /* Navbar */
+        .navbar {
+            position: sticky;
+            top: 0;
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(12px);
+            z-index: 1000;
+            padding: 18px 0;
+            border-bottom: 1px solid rgba(201, 160, 61, 0.3);
+        }
+
+        .nav-flex {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .logo h1 {
+            font-size: 1.8rem;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+        }
+
+        .logo span {
+            color: var(--gold);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            font-weight: 500;
+        }
+
+        .nav-links a {
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--gold);
+        }
+
+        .mobile-menu {
+            display: none;
+            font-size: 1.8rem;
+            cursor: pointer;
+        }
+
+        /* Hero */
+        .hero {
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(110deg, #0A0A0A 45%, rgba(10,10,10,0.7)), url('https://placehold.co/1600x900/222222/C9A03D?text=Premium+Barber+Studio+Ulundi') center/cover no-repeat;
+            background-blend-mode: overlay;
+        }
+
+        .hero-content {
+            max-width: 650px;
+        }
+
+        .hero-badge {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--gold);
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 24px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: #CCC;
+            margin-bottom: 36px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        /* Cards Service & Barber */
+        .services-grid, .barbers-grid, .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 32px;
+            margin-top: 20px;
+        }
+
+        .service-card, .barber-card {
+            background: var(--card-bg);
+            border-radius: 24px;
+            padding: 32px 24px;
+            transition: transform 0.3s ease, box-shadow 0.3s;
+            border: 1px solid #242424;
+            text-align: center;
+        }
+
+        .service-card:hover, .barber-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 30px -10px rgba(0,0,0,0.6);
+            border-color: var(--gold);
+        }
+
+        .service-icon {
+            font-size: 2.8rem;
+            color: var(--gold);
+            margin-bottom: 20px;
+        }
+
+        .service-card h3 {
+            font-size: 1.7rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .price {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--gold);
+            margin: 15px 0;
+        }
+
+        .price span {
+            font-size: 0.9rem;
+            font-weight: 400;
+            color: #aaa;
+        }
+
+        .barber-img {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            background: linear-gradient(145deg, #2A2A2A, #111);
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            border: 3px solid var(--gold);
+            color: var(--gold);
+        }
+
+        .barber-card h3 {
+            font-size: 1.6rem;
+            margin-bottom: 5px;
+        }
+
+        .barber-title {
+            color: var(--gold);
+            font-weight: 500;
+            margin-bottom: 15px;
+        }
+
+        .barber-bio {
+            color: #bbb;
+            font-size: 0.95rem;
+        }
+
+        /* Gallery */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 25px;
+        }
+
+        .gallery-item {
+            border-radius: 20px;
+            overflow: hidden;
+            aspect-ratio: 1 / 1;
+            background: #1E1E1E;
+            transition: 0.3s;
+            border: 1px solid #2c2c2c;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: 0.4s;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        /* Testimonials */
+        .testimonial-card {
+            background: #0F0F0F;
+            border-radius: 24px;
+            padding: 30px;
+            border-left: 6px solid var(--gold);
+        }
+
+        .testimonial-text {
+            font-size: 1rem;
+            line-height: 1.5;
+            color: #ddd;
+            margin: 20px 0;
+        }
+
+        .customer-name {
+            font-weight: 700;
+            margin-top: 16px;
+            color: var(--gold);
+        }
+
+        .rating {
+            color: var(--gold);
+            letter-spacing: 2px;
+        }
+
+        /* Contact section */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+        }
+
+        .contact-details {
+            background: #0E0E0E;
+            padding: 32px;
+            border-radius: 32px;
+        }
+
+        .contact-info-item {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background: rgba(201, 160, 61, 0.1);
+            border-radius: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: var(--gold);
+        }
+
+        .contact-form {
+            background: #0E0E0E;
+            padding: 32px;
+            border-radius: 32px;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 14px 18px;
+            margin-bottom: 20px;
+            background: #1A1A1A;
+            border: 1px solid #2E2E2E;
+            border-radius: 24px;
+            color: white;
+            font-family: inherit;
+        }
+
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: var(--gold);
+        }
+
+        .map-container {
+            margin-top: 24px;
+            border-radius: 24px;
+            overflow: hidden;
+            border: 1px solid rgba(201, 160, 61, 0.3);
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 240px;
+            border: 0;
+            display: block;
+        }
+
+        .location-note {
+            background: rgba(201, 160, 61, 0.1);
+            padding: 12px 16px;
+            border-radius: 20px;
+            margin-top: 16px;
+            text-align: center;
+            font-size: 0.9rem;
+            border-left: 3px solid var(--gold);
+        }
+
+        /* Footer */
+        footer {
+            background: #050505;
+            padding: 56px 0 30px;
+        }
+
+        .footer-grid {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .social-icons a {
+            display: inline-block;
+            background: #1E1E1E;
+            width: 42px;
+            height: 42px;
+            line-height: 42px;
+            text-align: center;
+            border-radius: 50%;
+            margin-right: 12px;
+            transition: 0.2s;
+            color: var(--gold);
+        }
+
+        .social-icons a:hover {
+            background: var(--gold);
+            color: black;
+        }
+
+        .copyright {
+            text-align: center;
+            border-top: 1px solid #222;
+            padding-top: 30px;
+            font-size: 0.85rem;
+            color: #888;
+        }
+
+        /* responsive */
+        @media (max-width: 900px) {
+            .nav-links {
+                display: none;
+            }
+            .mobile-menu {
+                display: block;
+            }
+            .nav-links.mobile-open {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                text-align: center;
+                padding: 20px 0 10px;
+                gap: 18px;
+            }
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+            h2 {
+                font-size: 2rem;
+            }
+            section {
+                padding: 60px 0;
+            }
+        }
+
+        @media (max-width: 550px) {
+            .hero-buttons {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            .btn-primary, .btn-secondary {
+                justify-content: center;
+            }
+        }
+
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #25D366;
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            color: white;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            z-index: 99;
+            transition: 0.2s;
+        }
+        .whatsapp-float:hover {
+            background: #128C7E;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+
+<!-- WhatsApp floating button -->
+<a href="https://wa.me/27781234567?text=Hello%20Denny%20Dalton%20Fixers%2C%20I'd%20like%20to%20book%20an%20appointment." target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+</a>
+
+<nav class="navbar">
+    <div class="container nav-flex">
+        <div class="logo">
+            <h1>DENNY DALTON <span>FIXERS</span></h1>
+        </div>
+        <div class="mobile-menu" id="menuToggle">
+            <i class="fas fa-bars"></i>
+        </div>
+        <div class="nav-links" id="navLinks">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#barbers">Barbers</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#testimonials">Reviews</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </div>
+</nav>
+
+<main>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content" data-aos="fade-up">
+                <div class="hero-badge">✦ ULUNDI'S FINEST GROOMING ✦</div>
+                <h1>Precision. Style.<br>Confidence.</h1>
+                <p>Step into Denny Dalton Fixers — where modern edge meets classic barber mastery. Premium cuts for the modern man in Ulundi, South Africa.</p>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn-primary"><i class="fas fa-calendar-check"></i> Book Appointment</a>
+                    <a href="#services" class="btn-secondary"><i class="fas fa-cut"></i> View Services</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" data-aos="fade-up">
+        <div class="container">
+            <h2>Crafted for the <span class="gold-text">Modern Gentleman</span></h2>
+            <div class="section-sub">More than a haircut — an experience of precision, relaxation, and premium grooming.</div>
+            <div style="display: flex; flex-wrap: wrap; gap: 40px; justify-content: space-between;">
+                <div style="flex: 1; min-width: 250px;">
+                    <p style="font-size: 1.1rem; margin-bottom: 24px; line-height: 1.6;">Denny Dalton Fixers was born from a passion to redefine barber culture in Ulundi. Our shop combines the soul of a classic barbershop with modern luxury — pristine cleanliness, master barbers, and an atmosphere that feels like a gentleman's club.</p>
+                    <p style="color: #CCC;">We believe a great haircut fuels confidence. With two dedicated professionals and premium techniques, we serve young professionals, students, and modern men who demand excellence. Every chair, every cut, every detail is intentional.</p>
+                </div>
+                <div style="flex: 1; background: linear-gradient(145deg, #141414, #0C0C0C); border-radius: 32px; padding: 30px; border: 1px solid var(--gold);">
+                    <i class="fas fa-scissors" style="font-size: 2rem; color: var(--gold); margin-bottom: 15px; display: block;"></i>
+                    <h3 style="margin-bottom: 12px;">Our Promise</h3>
+                    <p>✔️ Sterilized tools & fresh towels per client<br>✔️ Precision fades & razor sharp lines<br>✔️ Warm towel shaves & aromatic experience<br>✔️ 100% satisfaction guarantee</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" data-aos="fade-up">
+        <div class="container">
+            <h2>Signature <span class="gold-text">Services</span></h2>
+            <div class="section-sub">Tailored grooming services from expert hands. Prices from ZAR.</div>
+            <div class="services-grid">
+                <div class="service-card"> <div class="service-icon"><i class="fas fa-cut"></i></div> <h3>Haircut</h3> <div class="price">R150 <span>+</span></div> <p>Classic or modern scissor cut tailored to your style.</p> </div>
+                <div class="service-card"> <div class="service-icon"><i class="fas fa-tachometer-alt"></i></div> <h3>Skin Fade</h3> <div class="price">R180 <span>+</span></div> <p>Seamless fade from skin to top, ultra sharp finish.</p> </div>
+                <div class="service-card"> <div class="service-icon"><i class="fas fa-beard"></i></div> <h3>Beard Trim</h3> <div class="price">R90 <span>+</span></div> <p>Shape, line-up & conditioning for the perfect beard.</p> </div>
+                <div class="service-card"> <div class="service-icon"><i class="fas fa-hand-peace"></i></div> <h3>Hair Wash</h3> <div class="price">R70 <span>+</span></div> <p>Relaxing premium shampoo + scalp massage.</p> </div>
+                <div class="service-card"> <div class="service-icon"><i class="fas fa-child"></i></div> <h3>Kids Cut</h3> <div class="price">R120 <span>+</span></div> <p>Fun, fast and fresh for young gents under 12.</p> </div>
+                <div class="service-card"> <div class="service-icon"><i class="fas fa-arrows-alt"></i></div> <h3>Line Up</h3> <div class="price">R80 <span>+</span></div> <p>Precision edge-up for sharp, clean hairlines.</p> </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Barbers Section -->
+    <section id="barbers" data-aos="fade-up">
+        <div class="container">
+            <h2>Meet The <span class="gold-text">Artisans</span></h2>
+            <div class="section-sub">Two passionate barbers dedicated to redefining your style.</div>
+            <div class="barbers-grid">
+                <div class="barber-card">
+                    <div class="barber-img"><i class="fas fa-user-tie"></i></div>
+                    <h3>Lwandle Nkosi</h3>
+                    <div class="barber-title">Master Barber & Fade Specialist</div>
+                    <p class="barber-bio">At 22, Lwandle brings fresh energy & precision. Known for his flawless skin fades and attention to detail. He’s trained in advanced modern techniques and is passionate about making every client look their sharpest.</p>
+                </div>
+                <div class="barber-card">
+                    <div class="barber-img"><i class="fas fa-user-astronaut"></i></div>
+                    <h3>Thabo "The Fixer" Dlamini</h3>
+                    <div class="barber-title">Grooming Expert & Beard Architect</div>
+                    <p class="barber-bio">24 years old, Thabo specializes in beard sculpting and luxury grooming rituals. With a calm yet confident approach, he makes sure each cut is a masterpiece. Winner of local style awards 2024.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" data-aos="fade-up">
+        <div class="container">
+            <h2>Fresh Looks <span class="gold-text">Gallery</span></h2>
+            <div class="section-sub">Our work speaks for itself — modern cuts, clean fades, happy gents.</div>
+            <div class="gallery-grid">
+                <div class="gallery-item"><img src="https://placehold.co/600x600/222222/C9A03D?text=Clean+Fade+Ulundi" alt="Haircut style"></div>
+                <div class="gallery-item"><img src="https://placehold.co/600x600/222222/C9A03D?text=Beard+Trim+Expert" alt="Beard grooming"></div>
+                <div class="gallery-item"><img src="https://placehold.co/600x600/222222/C9A03D?text=Premium+Tools" alt="Barber tools premium"></div>
+                <div class="gallery-item"><img src="https://placehold.co/600x600/222222/C9A03D?text=Happy+Client+Style" alt="Happy client"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" data-aos="fade-up">
+        <div class="container">
+            <h2>Client <span class="gold-text">Stories</span></h2>
+            <div class="section-sub">Rated 4.9★ — trusted by Ulundi’s stylish community.</div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card"><div class="rating">★★★★★</div><p class="testimonial-text">"Hands down the best barbershop in Ulundi! The atmosphere is premium, and Lwandle gave me the cleanest skin fade I've ever had. Definitely coming back."</p><div class="customer-name">— Sipho M., Young Professional</div></div>
+                <div class="testimonial-card"><div class="rating">★★★★★</div><p class="testimonial-text">"Professional, clean and super stylish. Thabo really knows how to work with beards. The hot towel finish was amazing. My new regular spot."</p><div class="customer-name">— Kagiso R., Entrepreneur</div></div>
+                <div class="testimonial-card"><div class="rating">★★★★★</div><p class="testimonial-text">"Booked online easily, got a perfect line-up. These guys are masters. Also the music and vibe is unmatched. Highly recommend Denny Dalton Fixers."</p><div class="customer-name">— Mpilo N., Student</div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section with Google Maps (Fixed location next to Nkamelwane Primary School) -->
+    <section id="contact" data-aos="fade-up">
+        <div class="container">
+            <h2>Reserve your <span class="gold-text">Chair</span></h2>
+            <div class="section-sub">Visit us or reach out — we’re here for your next sharp look.</div>
+            <div class="contact-grid">
+                <div class="contact-details">
+                    <div class="contact-info-item"><div class="contact-icon"><i class="fas fa-phone-alt"></i></div><div><strong>Call Us</strong><br>+27 78 123 4567</div></div>
+                    <div class="contact-info-item"><div class="contact-icon"><i class="fab fa-whatsapp"></i></div><div><strong>WhatsApp Booking</strong><br>+27 78 123 4567 (Text for appt)</div></div>
+                    <div class="contact-info-item"><div class="contact-icon"><i class="far fa-clock"></i></div><div><strong>Opening Hours</strong><br>Mon - Sat: 8:00 AM – 6:00 PM<br>Sunday: Closed</div></div>
+                    <div class="contact-info-item"><div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div><div><strong>Ulundi Central (Next to Nkamelwane Primary School)</strong><br>Corner School Road, Ulundi, 3838, South Africa</div></div>
+                    
+                    <!-- Google Maps Embed using the exact link provided, showing location next to Nkamelwane Primary School -->
+                    <div class="map-container">
+                        <iframe src="https://maps.google.com/maps?q=Nkamelwane%20Primary%20School%20Ulundi&t=&z=16&ie=UTF8&iwloc=&output=embed" 
+                                allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                    <div class="location-note">
+                        <i class="fas fa-school" style="color: var(--gold); margin-right: 8px;"></i> Located right next to Nkamelwane Primary School — easy to find, with parking available.
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h3 style="margin-bottom: 24px;">Quick Inquiry</h3>
+                    <!-- Contact form without backend action - purely frontend demo -->
+                    <form id="contactForm" action="#" method="post">
+                        <input type="text" placeholder="Full name" required>
+                        <input type="email" placeholder="Email address">
+                        <input type="tel" placeholder="Phone number">
+                        <textarea rows="3" placeholder="Tell us your style needs..."></textarea>
+                        <button type="submit" class="btn-primary" style="width:100%; justify-content: center;"><i class="fas fa-paper-plane"></i> Send Message</button>
+                        <p style="font-size: 0.75rem; margin-top: 15px; color: gray;">We'll reply within 2 hours. No backend — we’ll contact you directly.</p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div><h3>DENNY DALTON <span class="gold-text">FIXERS</span></h3><p style="margin-top: 10px;">Luxury grooming for the modern man. Ulundi’s premium destination.</p></div>
+            <div><h4>Quick Links</h4><ul style="list-style: none; margin-top: 12px;"><li><a href="#home">Home</a></li><li><a href="#services">Services</a></li><li><a href="#barbers">Barbers</a></li><li><a href="#contact">Contact</a></li></ul></div>
+            <div><h4>Connect</h4><div class="social-icons" style="margin-top: 12px;"><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i class="fab fa-x-twitter"></i></a><a href="#"><i class="fab fa-tiktok"></i></a></div></div>
+            <div><h4>Hours</h4><p>Mon-Sat: 8AM – 6PM<br>Sun: Closed</p><p style="margin-top: 10px;">Walk-ins welcome</p></div>
+        </div>
+        <div class="copyright">© 2025 Denny Dalton Fixers — Premium Barbershop, Ulundi, South Africa. Located next to Nkamelwane Primary School. All cuts crafted with passion.</div>
+    </div>
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init({ duration: 800, once: true, offset: 80 });
+    
+    // Mobile menu toggle
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+    if(menuToggle) {
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('mobile-open');
+        });
+    }
+    
+    // Smooth scroll for all internal links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            if(targetId === "#") return;
+            const targetElement = document.querySelector(targetId);
+            if(targetElement){
+                targetElement.scrollIntoView({ behavior: 'smooth' });
+                if(navLinks.classList.contains('mobile-open')) navLinks.classList.remove('mobile-open');
+            }
+        });
+    });
+    
+    // Simple front-end contact form — no backend query, just a demo alert.
+    const contactForm = document.getElementById('contactForm');
+    if(contactForm) {
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert("✨ Thank you for reaching out! ✨\nDenny Dalton Fixers will contact you shortly via WhatsApp or call. For instant booking, click the WhatsApp button.");
+            contactForm.reset();
+        });
+    }
+</script>
+</body>
+</html>

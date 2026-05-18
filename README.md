@@ -1,16 +1,16 @@
 
 
-/***FUTURE_FS_03 — Premium Local Barbershop Website***/
+**FUTURE_FS_03 — Premium Local Barbershop Website**
 
 This project is a modern static barbershop website created for a local grooming business operated by me and my younger brother. The goal of this website was to establish a strong digital presence for a township/local business while delivering a clean, modern, and professional user experience.
 
 The website was designed and deployed as part of a Full Stack Web Development internship task, focusing on frontend development, responsive design, and real-world business problem solving.
 
 Live Website:
-[Local Barbershop(Third Task)](https://nqobizitha04mbuyisa.github.io/FUTURE_FS_03/)
+[Denny Dalton Barbershop)](https://nqobizitha04mbuyisa.github.io/FUTURE_FS_03/)
 
 
-/***Project Purpose**/
+**Project Purpose**
 
 Many local businesses still struggle with:
 
@@ -29,7 +29,7 @@ Clear service pricing and barber information
 Modern branding and visual presentation
 Quick customer communication through WhatsApp integration
 
-/***The website acts as a digital introduction to the business, helping customers understand:***/
+**The website acts as a digital introduction to the business, helping customers understand:**
 
 Who we are
 What services we offer
@@ -37,7 +37,7 @@ Where we are located
 Business operating hours
 The overall atmosphere and professionalism of the shop
 
-/***Key Features***/
+**Key Features**
 Fully responsive modern UI/UX
 Premium dark-themed barbershop design
 Service showcase section
@@ -49,7 +49,7 @@ Smooth scrolling navigation
 Mobile-friendly layout
 Static frontend deployment using GitHub Pages
 
-/***Technologies Used***
+***Technologies Used***
 HTML5
 CSS3
 JavaScript
@@ -60,13 +60,13 @@ Git & GitHub
 GitHub Pages Deployment
 Deployment
 
-/***This project is deployed using GitHub Pages as a static website without backend integration.***/
+**This project is deployed using GitHub Pages as a static website without backend integration.**
 
-/***Deployment Platform:***/
+**Deployment Platform:**
 
 GitHub Pages
 
-/***Why Static Deployment?***/
+**Why Static Deployment?**
 
 Faster loading speed
 Easy maintenance
@@ -75,7 +75,7 @@ Reliable accessibility
 Ideal for informational business websites
 Business Value
 
-/***This website demonstrates how technology can empower small and local businesses by:***/
+**This website demonstrates how technology can empower small and local businesses by:**
 
 Improving customer accessibility
 Increasing online credibility
@@ -86,9 +86,9 @@ Creating stronger first impressions
 
 For many customers, a website is the first interaction with a business. This project focuses on ensuring that first impression reflects professionalism, trust, and quality service.
 
-/****Future Improvements***/
+**Future Improvements**
 
-/****Potential future enhancements include:***/
+**Potential future enhancements include:**
 
 Online booking system
 Backend appointment management
@@ -99,6 +99,6 @@ Real-time availability tracking
 Payment integration
 Author
 
-Developed by /***Nqobizitha Mbuyisa***/as part of a Full Stack Web Development internship project.
+Developed by **Nqobizitha Mbuyisa** as part of a Full Stack Web Development internship project.
 
 This project represents both technical growth and the use of software development to solve practical business challenges within local communities.
